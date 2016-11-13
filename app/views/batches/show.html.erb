@@ -1,0 +1,29 @@
+<h2>Listing Sales</h2>
+
+<table class="table">
+  <thead> 
+    <tr> 
+      <th>Comprador</th> 
+      <th>descrição</th> 
+      <th>Preço Uniário</th> 
+      <th>Quantidade</th>
+      <th>Endereço</th>
+      <th>Fornecedor</th>
+    </tr> 
+  </thead>
+  <tbody> 
+    <% @batch.sales.each do |sale| %>
+      <tr> 
+        <td><%= sale.buyer %></td> 
+        <td><%= sale.description %></td> 
+        <td><%= sale.price %></td> 
+        <td><%= sale.quantity %></td>
+        <td><%= sale.address %></td>
+        <td><%= sale.supplier %></td>
+      </tr> 
+    <%end%>
+    <tr>
+      <td><%= @batch.total_revenue %></td>
+    </tr>
+  </tbody>
+</table>

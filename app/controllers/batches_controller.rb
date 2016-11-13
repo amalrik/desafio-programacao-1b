@@ -11,4 +11,8 @@ class BatchesController < ApplicationController
     Sale.import(params[:file])
     redirect_to root_url, notice: "Sales imported."
   end
+
+  def show
+    @batch = Batch.find(params[:id])
+  end
 end

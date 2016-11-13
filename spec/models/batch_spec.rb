@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Batch, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { create(:batch_with_sales) }
+
+  describe "#total_revenue" do
+    it "calculates to total revenue" do
+      expect(subject.total_revenue).to eq(50.0)
+    end
+  end
 end
