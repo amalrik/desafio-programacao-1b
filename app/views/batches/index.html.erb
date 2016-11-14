@@ -15,10 +15,11 @@
         <th scope="row"><%= batch.id %></th> 
         <td><%= l(batch.created_at, format: :brazil) %></td> 
         <td><%= batch.total_revenue%></td> 
-        <td><%= link_to "see import a sales", batch_path(batch), class: "btn btn-primary", role: "button" %></td>
+        <td><%= link_to "see sales", batch_path(batch), class: "btn btn-primary", role: "button" %></td>
       </tr> 
     <%end%>
   </tbody>
 </table>
 
 <%= link_to "import a sales file", new_batch_path, class: "btn btn-primary", role: "button" %>
+<%= will_paginate @batches, renderer: BootstrapPagination::Rails %>

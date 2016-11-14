@@ -1,0 +1,2 @@
+Comprador	descrição	Preço Uniário	Quantidade	Endereço	Fornecedor
+Snake Plissken	R$20 Sneakers for R$5	5.0	4	123 Fake St	Sneaker Store Emporium
